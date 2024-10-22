@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Shanti&display=swap');
+
+:root {
+    --primary-color-light: #226792;
+    --primary-color: #154273;
+    --primary-color-dark: #0E2467;
+    --secondary-color-light: #A3C6EB;
+    --secondary-color: #8EA9DE;
+    --secondary-color-dark: #7683D7;
+    --accent-color: #F18F01;
+    --accent-color-light: #FFC31F;
+    --background-color: #FFF;
+    --background-color-dark: #EBF6FB;
+    --text-color-dark: #000;
+    --text-color-light: #FFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif;
+}
+
+p, span, a {
+    font-family: "Shanti", sans-serif;
+}
+
+h1, .h1 {
+    font-size: 3.5rem;
+    line-height: 120%;
+}
+
+h2, .h2 {
+    font-size: 3rem;
+    line-height: 120%;
+}
+
+h3, .h3 {
+    font-size: 2.5rem;
+    line-height: 120%;
+}
+
+h4, .h4 {
+    font-size: 2rem;
+    line-height: 130%;
+}
+
+h5, .h5 {
+    font-size: 1.5rem;
+    line-height: 140%;
+}
+
+h6, .h6 {
+    font-size: 1.25rem;
+    line-height: 140%;
+}
