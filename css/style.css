@@ -31,6 +31,12 @@ img {
     --background-color-dark: #EBF6FB;
     --text-color-dark: #000;
     --text-color-light: #FFF;
+    /* Padding used on the sides of the page */
+    --body-side-padding: 64px;
+
+    @media only screen and (max-width: 768px) {
+        --body-side-padding: 16px;
+    }
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -103,7 +109,7 @@ h6, .h6 {
 }
 
 /* All text besides headings */
-p, span, a {
+p, span, a, blockquote {
     font-family: "Shanti", sans-serif;
     line-height: 150%;
 }
@@ -116,6 +122,25 @@ p, span, a {
     font-size: 0.875rem;
 }
 
+/* Buttons */
+.button {
+    /* Display the text as one whole block; not inline */
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    background-color: var(--accent-color-light);
+    color: var(--text-color-dark);
+    text-align: right;
+    text-wrap: balance;
+    text-decoration: none;
+    transition: background-color 100ms;
+}
+
+.button:hover {
+    background-color: var(--accent-color);
+}
+
 /* Navbar */
 #main-navbar {
     width: 100%;
@@ -125,6 +150,7 @@ p, span, a {
     box-sizing: border-box;
     padding: 0 48px;
     background: linear-gradient(5deg, var(--primary-color), var(--primary-color-dark));
+    z-index: 10;
 }
 
 #main-navbar > ul {
