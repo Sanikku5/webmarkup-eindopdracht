@@ -198,7 +198,8 @@ p, span, a, blockquote {
     filter: grayscale(100%) brightness(2);
 }
 
-@media only screen and (max-width: 1100px) {
+/* Hide certain text in the nav pills if the screen gets to cramped */
+@media only screen and (max-width: 1140px) {
     #nav-pill-hide-when-cramped {
         display: none;
     }
