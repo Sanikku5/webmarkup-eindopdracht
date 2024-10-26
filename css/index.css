@@ -7,6 +7,7 @@
     /* Vertically align the contents of the grid children to the bottom */
     align-items: end;
     padding-top: 5rem;
+    box-sizing: border-box;
     padding-left: var(--body-side-padding);
 }
 
@@ -28,13 +29,13 @@
     text-align: right;
 }
 
-#intro-section__image {
+#intro-section__img {
     /* For some reason, this aligns the image perfectly to the bottom, compared to when this is not declared.. */
     display: grid;
 }
 
 /* Picture of Dick Schoof to the right */
-#intro-section__image > img {
+#intro-section__img > img {
     /* Width of the image is 100% of the parent, whose width is defined by the grid container (#intro-section) */
     width: auto;
     max-height: 25rem;
@@ -42,11 +43,13 @@
 
 /* Navigation cards */
 #home-nav-cards {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px var(--body-side-padding);
     background-color: var(--secondary-color-light);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 16px;
-    padding: 24px var(--body-side-padding);
 }
 
 .home-nav-cards__card {
@@ -90,4 +93,21 @@
     align-self: end;
     /* Align itself to the right in the grid row */
     justify-self: end;
+}
+
+@media only screen and (max-width: 768px) {
+    #intro-section {
+        grid-template-columns: auto;
+        padding-top: var(--body-side-padding);
+        padding-right: var(--body-side-padding);
+    }
+
+    #intro-section__img > img {
+        max-width: 90%;
+    }
+
+    /* Nav cards section changes from four columns to one column wide */
+    #home-nav-cards {
+        grid-template-columns: auto;
+    }
 }
