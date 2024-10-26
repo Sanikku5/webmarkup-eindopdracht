@@ -1,6 +1,23 @@
+/* MAIN CSS FILE USED FOR ALL PAGES ON THE SITE */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Shanti&display=swap');
 
+/* Remove browser default styling */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100vw;
+}
+
+/* Color variables */
 :root {
     --primary-color-light: #226792;
     --primary-color: #154273;
@@ -16,14 +33,12 @@
     --text-color-light: #FFF;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Roboto Slab", serif;
+    font-weight: bold;
 }
 
-p, span, a {
-    font-family: "Shanti", sans-serif;
-}
-
+/* Heading font sizes for desktop */
 h1, .h1 {
     font-size: 3.5rem;
     line-height: 120%;
@@ -52,4 +67,162 @@ h5, .h5 {
 h6, .h6 {
     font-size: 1.25rem;
     line-height: 140%;
+}
+
+/* Heading font sizes for mobile */
+@media only screen and (max-width: 768px) {
+    h1, .h1 {
+        font-size: 2.5rem;
+        line-height: 120%;
+    }
+    
+    h2, .h2 {
+        font-size: 2.25rem;
+        line-height: 120%;
+    }
+    
+    h3, .h3 {
+        font-size: 2rem;
+        line-height: 120%;
+    }
+    
+    h4, .h4 {
+        font-size: 1.5rem;
+        line-height: 140%;
+    }
+    
+    h5, .h5 {
+        font-size: 1.25rem;
+        line-height: 140%;
+    }
+    
+    h6, .h6 {
+        font-size: 1.125rem;
+        line-height: 140%;
+    }
+}
+
+/* All text besides headings */
+p, span, a {
+    font-family: "Shanti", sans-serif;
+    line-height: 150%;
+}
+
+.text-large {
+    font-size: 1.25rem;
+}
+
+.text-small {
+    font-size: 0.875rem;
+}
+
+/* Navbar */
+#main-navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 0 48px;
+    background: linear-gradient(5deg, var(--primary-color), var(--primary-color-dark));
+}
+
+#main-navbar > ul {
+    display: grid;
+    grid-template-columns: 1fr repeat(5, auto);
+    /* Horizontally align the columns to the center*/
+    justify-content: center;
+    /* Vertically center the li */
+    align-items: center;
+    gap: 4ch;
+}
+
+/* Navbar pills / buttons */
+#main-navbar > ul > li > a {
+    display: inline-block;
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    text-wrap: nowrap;
+    transition: background-color 100ms;
+}
+
+#main-navbar > ul > li > a:hover {
+    background-color: rgba(0, 0 , 0, 0.2);
+}
+
+/* Add white underline to all nav pills that aren't the logo */
+#main-navbar > ul > li:not(#main-navbar__logo) {
+    border-bottom: solid 2px var(--primary-color-light);
+    transition: border-bottom 100ms;
+}
+
+#main-navbar > ul > li:hover:not(#main-navbar__logo) {
+    border-bottom: solid 2px var(--text-color-light);
+}
+
+#main-navbar__logo img {
+    height: 40px;
+    /* Use filter to make the logo white */
+    filter: grayscale(100%) brightness(2);
+}
+
+@media only screen and (max-width: 1100px) {
+    #nav-pill-hide-when-cramped {
+        display: none;
+    }
+    
+    #main-navbar > ul {
+        gap: 2ch;
+    }
+}
+
+/* Footer */
+#main-footer {
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 64px;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 80px;
+    background: linear-gradient(-5deg, var(--primary-color-dark), var(--primary-color-light));
+}
+
+#main-footer > nav {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+/* Left list of the footer */
+#main-footer > nav > ul:first-child {
+    align-self: end;
+}
+
+#main-footer > nav > ul:first-child img {
+    height: 40px;
+    /* Use filter to make the logo white */
+    filter: grayscale(100%) brightness(2);
+}
+
+/* Right list of the footer */
+#main-footer > nav > ul:last-child {
+    display: grid;
+    /* Align items to the right, instead of filling the grid column (default) */
+    justify-items: end;
+    gap: 1em;
+}
+
+#main-footer > nav > ul > li > a {
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 16px;
+    text-wrap: nowrap;
+    transition: background-color 100ms;
+}
+
+#main-footer > nav > ul > li > a:hover {
+    background-color: rgba(0, 0 , 0, 0.2);
 }
