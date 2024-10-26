@@ -77,3 +77,17 @@
 }
 
 /* Text in the cards */
+.home-nav-cards__card__body {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    /* Align content in the rows to the top */
+    align-items: start;
+    gap: 0.5em;
+}
+
+.home-nav-cards__card__body > a.button {
+    /* Align itself to the bottom of the grid row */
+    align-self: end;
+    /* Align itself to the right in the grid row */
+    justify-self: end;
+}
