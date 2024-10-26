@@ -134,6 +134,8 @@ p, span, a, blockquote {
     text-align: right;
     text-wrap: balance;
     text-decoration: none;
+    /* box-shadow: color, x-offset, y-offset, blur radius */
+    box-shadow: rgba(0, 0, 0, 20%) 0 2px 8px;
     transition: background-color 100ms;
 }
 
@@ -150,6 +152,8 @@ p, span, a, blockquote {
     box-sizing: border-box;
     padding: 0 48px;
     background: linear-gradient(5deg, var(--primary-color), var(--primary-color-dark));
+    /* box-shadow: color, x-offset, y-offset, blur radius */
+    box-shadow: rgba(0, 0, 0, 30%) 0 1px 16px;
     z-index: 10;
 }
 
@@ -213,6 +217,8 @@ p, span, a, blockquote {
     padding-right: 48px;
     padding-bottom: 80px;
     background: linear-gradient(-5deg, var(--primary-color-dark), var(--primary-color-light));
+    /* box-shadow: color, x-offset, y-offset, blur radius */
+    box-shadow: rgba(0, 0, 0, 30%) 0 1px 16px;
 }
 
 #main-footer > nav {
