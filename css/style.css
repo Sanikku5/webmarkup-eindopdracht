@@ -35,10 +35,6 @@ img {
     --body-side-padding: 64px;
     /* cubic-bezier curve used for transition */
     --transition-overshoot: cubic-bezier(0, 0, 0.65, 1.73);
-
-    @media only screen and (max-width: 768px) {
-        --body-side-padding: 16px;
-    }
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
@@ -75,39 +71,6 @@ h5, .h5 {
 h6, .h6 {
     font-size: 1.25rem;
     line-height: 140%;
-}
-
-/* Heading font sizes for mobile */
-@media only screen and (max-width: 768px) {
-    h1, .h1 {
-        font-size: 2.5rem;
-        line-height: 120%;
-    }
-    
-    h2, .h2 {
-        font-size: 2.25rem;
-        line-height: 120%;
-    }
-    
-    h3, .h3 {
-        font-size: 2rem;
-        line-height: 120%;
-    }
-    
-    h4, .h4 {
-        font-size: 1.5rem;
-        line-height: 140%;
-    }
-    
-    h5, .h5 {
-        font-size: 1.25rem;
-        line-height: 140%;
-    }
-    
-    h6, .h6 {
-        font-size: 1.125rem;
-        line-height: 140%;
-    }
 }
 
 /* All text besides headings */
@@ -148,7 +111,7 @@ p, span, a, blockquote {
     transform: scale(105%);
 }
 
-/* Navbar */
+/* Navbar for desktop */
 #main-navbar {
     width: 100%;
     position: fixed;
@@ -214,6 +177,100 @@ p, span, a, blockquote {
     }
 }
 
+/* Little decorative lint at the left of the navbar */
+#main-navbar__lint {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 32px;
+    top: 63px;
+    opacity: 100%;
+    transition: opacity 400ms ease-in-out;
+}
+
+#main-navbar__lint:hover {
+    opacity: 20%;
+}
+
+#main-navbar__lint > svg {
+    /* Default is for some reason 300x250px? */
+    width: 100px;
+    height: 100px;
+}
+
+#main-navbar__lint > svg > path {
+    fill: var(--primary-color);
+}
+
+#main-navbar__lint > img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    padding-left: 15px;
+    padding-top: 5px;
+    filter: invert(100%);
+}
+
+/* Navbar for mobile */
+#main-navbar-mobile {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    /* Include padding in the calculated width */
+    box-sizing: border-box;
+    padding: 0 8px;
+    background: linear-gradient(0deg, var(--primary-color-dark), var(--primary-color));
+    z-index: 10;
+}
+
+#main-navbar-mobile > ul {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-between;
+    /* Vertically align the contents of the rows to the center */
+    align-items: center;
+    /* Horizontally align the contents of each column to the center */
+    justify-items: center;
+}
+
+/* The icons that lead you to a more detailed page */
+.main-navbar-mobile__icon {
+    display: grid;
+    /* Horizontally center content in the rows */
+    justify-items: center;
+    color: var(--text-color-light);
+    text-decoration: none;
+    text-align: center;
+}
+
+.main-navbar-mobile__icon, #main-navbar-mobile__home {
+    border-radius: 16px;
+    padding: 16px;
+    transition: background-color 100ms;
+}
+
+.main-navbar-mobile__icon:hover, #main-navbar-mobile__home:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main-navbar-mobile__icon > img {
+    width: 51px;
+    filter: invert(100%);
+}
+
+/* Logo that serves as a return to home button */
+#main-navbar-mobile__home {
+    display: inline-block;
+}
+
+#main-navbar-mobile__home > img {
+    width: 200px;
+    /* Use filter to make the logo white */
+    filter: grayscale(100%) brightness(2);
+}
+
 /* Footer */
 #main-footer {
     width: 100%;
@@ -222,7 +279,7 @@ p, span, a, blockquote {
     padding-left: 48px;
     padding-right: 48px;
     padding-bottom: 80px;
-    background: linear-gradient(-5deg, var(--primary-color-dark), var(--primary-color-light));
+    background: linear-gradient(-5deg, var(--primary-color-dark), var(--primary-color));
     /* box-shadow: color, x-offset, y-offset, blur radius */
     box-shadow: rgba(0, 0, 0, 30%) 0 1px 16px;
 }
@@ -266,4 +323,50 @@ p, span, a, blockquote {
 #main-footer > nav > ul > li > a:hover {
     background-color: rgba(0, 0 , 0, 0.2);
     transform: scale(105%);
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+    :root {
+        --body-side-padding: 16px;
+    }
+    
+    /* Heading font sizes for mobile */
+    h1, .h1 {
+        font-size: 2.5rem;
+        line-height: 120%;
+    }
+    
+    h2, .h2 {
+        font-size: 2.25rem;
+        line-height: 120%;
+    }
+    
+    h3, .h3 {
+        font-size: 2rem;
+        line-height: 120%;
+    }
+    
+    h4, .h4 {
+        font-size: 1.5rem;
+        line-height: 140%;
+    }
+    
+    h5, .h5 {
+        font-size: 1.25rem;
+        line-height: 140%;
+    }
+    
+    h6, .h6 {
+        font-size: 1.125rem;
+        line-height: 140%;
+    }
+
+    /* Switch navbar to mobile */
+    #main-navbar {
+        display: none;
+    }
+    #main-navbar-mobile {
+        display: block;
+    }
 }
