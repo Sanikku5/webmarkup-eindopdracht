@@ -369,4 +369,23 @@ p, span, a, blockquote {
     #main-navbar-mobile {
         display: block;
     }
+
+    /* Switch footer to mobile */
+    #main-footer {
+        padding-top: 32px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-bottom: 150px;
+    }
+
+    #main-footer > nav {
+        /* Change from two columns to one columns */
+        grid-template-columns: auto;
+        gap: 2rem;
+    }
+
+    #main-footer > nav > ul:last-child {
+        /* Horizontally align to the left */
+        justify-items: start;
+    }
 }
