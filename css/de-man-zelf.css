@@ -44,7 +44,6 @@ main {
     /* Again, this somehow fixes the alignment to the section under it? */
     display: grid;
     height: 25rem;
-    max-width: 100%;
     object-fit: cover;
 }
 
@@ -261,6 +260,7 @@ iframe {
 
     #img-sifan > img, #img-washington > img {
         height: auto;
+        max-width: 100%;
     }
 
     #dick-zelf-familie {
