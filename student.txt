@@ -2,4 +2,6 @@ Student name: Aloys Stekkinger
 Student number: 734496
 Student class: INF1B
 GitHub Repository: https://github.com/Sanikku5/webmarkup-eindopdracht
-Github Pages URL: 
+Github Pages URL:
+https://github.com/Sanikku5/webmarkup-eindopdracht/blob/main/index.html
+https://github.com/Sanikku5/webmarkup-eindopdracht/blob/main/de-man-zelf.html
