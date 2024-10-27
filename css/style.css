@@ -87,6 +87,10 @@ p, span, a, blockquote, figcaption {
     font-size: 0.875rem;
 }
 
+figcaption {
+    text-align: center;
+}
+
 /* Buttons */
 .button {
     /* Display the text as one whole block; not inline */
