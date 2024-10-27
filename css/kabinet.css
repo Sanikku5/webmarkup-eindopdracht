@@ -40,7 +40,7 @@ table {
 th, td {
     padding: 0.5rem 1ch;
     border-width: 1px;
-    border-style: solid;
+    border-style: double;
     border-color: var(--text-color-dark);
 }
 

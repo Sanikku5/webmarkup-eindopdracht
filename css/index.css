@@ -1,4 +1,9 @@
 /* CSS FILE USED FOR THE HOME PAGE (index.html) */
+/* REQUIRED CRITERIA FOR CSS BASIC WHAT AM I LOOKING AT */
+h1 {
+    word-spacing: 2rem;
+    text-transform: uppercase;
+}
 
 #intro-section {
     display: grid;
@@ -23,6 +28,8 @@
     text-align: center;
     /* Tries to balance wrapping text by making it so each line has around the same amount of characters */
     text-wrap: balance;
+    /* REQUIRED CRITERIA FOR CSS BASIC, PLEASE GET RID OF IT BEFORE MY EYES MELT */
+    letter-spacing: 2px;
 }
 
 #intro-section__text__quoted-person {
@@ -88,6 +95,11 @@
     /* Align content in the rows to the top */
     align-items: start;
     gap: 0.5em;
+}
+
+.home-nav-cards__card__body p {
+    /* REQUIRED FOR CSS BASIC */
+    text-indent: 2rem;
 }
 
 .home-nav-cards__card__body > a.button {

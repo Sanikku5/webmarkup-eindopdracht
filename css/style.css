@@ -120,6 +120,10 @@ table {
     transform: scale(105%);
 }
 
+.button:active {
+    background-color: var(--text-color-light);
+}
+
 /* Navbar for desktop */
 #main-navbar {
     width: 100%;
