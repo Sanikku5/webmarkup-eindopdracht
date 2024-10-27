@@ -1,1 +1,47 @@
 /* CSS FILE USED FOR kabinet.html */
+h1 {
+    padding-top: 11rem;
+    padding-left: var(--body-side-padding);
+    padding-right: var(--body-side-padding);
+    padding-bottom: 1rem;
+}
+
+#kabinet-bordesfoto {
+    padding: 0 var(--body-side-padding);
+}
+
+#kabinet-bordesfoto img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+#kabinet-cta {
+    text-align: center;
+}
+
+#kabinet-info {
+    background-color: var(--secondary-color-light);
+    padding: var(--body-side-padding);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+
+#kabinet-info > figure {
+    /* Vertically align to the bottom */
+    align-self: end;
+}
+
+h2 {
+    background-color: var(--secondary-color-light);
+    padding: 0 var(--body-side-padding);
+}
+
+#kabinet-columns {
+    background-color: var(--secondary-color-light);
+    padding: var(--body-side-padding);
+}
+
+.kabinet-card {
+    background-color: var(--background-color);
+}
