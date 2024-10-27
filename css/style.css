@@ -74,7 +74,7 @@ h6, .h6 {
 }
 
 /* All text besides headings */
-p, span, a, blockquote, figcaption, th, td {
+p, span, a, blockquote, figcaption, th, td, li {
     font-family: "Shanti", sans-serif;
     line-height: 150%;
 }
@@ -337,6 +337,11 @@ table {
     height: 40px;
     /* Use filter to make the logo white */
     filter: grayscale(100%) brightness(2);
+}
+
+#main-footer > nav > ul:first-child > li {
+    color: var(--text-color-light);
+    padding-left: 24px;
 }
 
 /* Right list of the footer */
