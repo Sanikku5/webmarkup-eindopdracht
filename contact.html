@@ -95,13 +95,24 @@
         <h2>Veelgestelde vragen</h2>
         <h2>Contactformulier</h2>
         <form action="" method="post">
-            <label for="form-aanhef">Aanhef</label>
+            <p>
+                Gebruik dit contactformulier om een bericht te versturen naar de maker van de website. <em>Alle velden met een * zijn verplicht om in te vullen!</em>
+            </p>
+            <label for="form-aanhef">Aanhef *</label>
             <select id="form-aanhef" name="form-aanhef">
                 <option value="dhr">Dhr.</option>
                 <option value="mevr">Mevr</option>
             </select>
-            <label for="">Label</label>
-            <input type="text" id="">
+            <label for="form-naam">Naam *</label>
+            <input type="text" id="form-naam">
+            <label for="form-mail">E-mail *</label>
+            <input type="text" id="form-mail">
+            <label for="form-tele">Telefoonnummer</label>
+            <input type="text" id="form-tele">
+            <label for="form-subject">Onderwerp *</label>
+            <input type="text" id="form-subject">
+            <label for="form-message">Jouw vraag of opmerking *</label>
+            <textarea name="form-message" id="form-message"></textarea>
             <input class="button" type="submit" value="Verzend &gt;">
         </form>
         <h2>Bronvermelding</h2>
