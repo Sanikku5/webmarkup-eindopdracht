@@ -95,6 +95,14 @@
     justify-self: end;
 }
 
+@media only screen and (max-width: 1280px) {
+    #home-nav-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+/* Mobile display */
 @media only screen and (max-width: 768px) {
     #intro-section {
         grid-template-columns: auto;
@@ -108,6 +116,6 @@
 
     /* Nav cards section changes from four columns to one column wide */
     #home-nav-cards {
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
     }
 }

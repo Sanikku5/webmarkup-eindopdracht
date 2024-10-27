@@ -243,6 +243,7 @@ p, span, a, blockquote {
     color: var(--text-color-light);
     text-decoration: none;
     text-align: center;
+    text-wrap: nowrap;
 }
 
 .main-navbar-mobile__icon, #main-navbar-mobile__home {
@@ -256,7 +257,7 @@ p, span, a, blockquote {
 }
 
 .main-navbar-mobile__icon > img {
-    width: 51px;
+    width: 50px;
     filter: invert(100%);
 }
 
@@ -269,6 +270,34 @@ p, span, a, blockquote {
     width: 200px;
     /* Use filter to make the logo white */
     filter: grayscale(100%) brightness(2);
+}
+
+@media only screen and (max-width: 600px) {
+    .main-navbar-mobile__icon {
+        font-size: 0.875rem;
+    }
+
+    .main-navbar-mobile__icon > img {
+        width: 35px;
+    }
+    .main-navbar-mobile__icon, #main-navbar-mobile__home {
+        padding: 8px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .main-navbar-mobile__icon, #main-navbar-mobile__home {
+        padding: 4px;
+    }
+    #main-navbar-mobile__home > img {
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    #main-navbar-mobile {
+        padding: 0;
+    }
 }
 
 /* Footer */
