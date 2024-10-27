@@ -39,7 +39,7 @@ table {
 
 th, td {
     padding: 0.5rem 1ch;
-    border-width: 1px;
+    border-width: 5px;
     border-style: double;
     border-color: var(--text-color-dark);
 }
