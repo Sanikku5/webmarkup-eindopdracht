@@ -1,1 +1,65 @@
 /* CSS FILE USED FOR taken.html */
+/* Mobile only header text */
+#taken-mobile-header {
+    display: none;
+}
+
+#taken-hero {
+    margin-top: 63px;
+    height: 700px;
+    box-sizing: border-box;
+    padding: 2rem var(--body-side-padding);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 60%) 30%, rgba(0, 0, 0, 0%) 40%),
+                      url("../img/schoof-en-rutte.png");
+    background-size: cover;
+    background-position: center;
+    color: var(--text-color-light);
+    text-shadow: 0 1px 4px #000;
+    display: grid;
+    align-content: end;
+}
+
+#taken-quoted-person {
+    text-align: right;
+}
+
+#taken-descriptive-text {
+    padding: 2rem var(--body-side-padding);
+}
+
+#taken-main-section {
+    padding: 2rem var(--body-side-padding);
+    background-color: var(--secondary-color-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 2rem;
+}
+
+.taken-taak {
+    display: grid;
+}
+
+.taken-taak a.button {
+    /* Vertically align to the bottom */
+    align-self: end;
+    /* Horizontally align to the right */
+    justify-self: end;
+}
+
+/* Don't display the images in the columns for mobile */
+.taken-taak > figure {
+    display: none;
+}
+
+#taken-desktop-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    padding: var(--body-side-padding);
+}
+
+#taken-desktop-images img {
+    width: 100%;
+    display: grid;
+    border-radius: 16px;
+}
