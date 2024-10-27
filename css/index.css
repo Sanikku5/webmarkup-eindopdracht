@@ -4,8 +4,6 @@
     display: grid;
     /* First columns stretches and shrinks with the room given by the grid container, second column's width depends on it's contents */
     grid-template-columns: 1fr auto;
-    /* Horizontally align the contents of the grid children to the right */
-    justify-items: end;
     /* Vertically align the contents of the grid children to the bottom */
     align-items: end;
     padding-top: 5rem;
@@ -34,6 +32,8 @@
 #intro-section__img {
     /* For some reason, this aligns the image perfectly to the bottom, compared to when this is not declared.. */
     display: grid;
+    /* Horizontally align to the right */
+    justify-self: end;
 }
 
 /* Picture of Dick Schoof to the right */
