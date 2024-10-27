@@ -74,7 +74,7 @@ h6, .h6 {
 }
 
 /* All text besides headings */
-p, span, a, blockquote {
+p, span, a, blockquote, figcaption {
     font-family: "Shanti", sans-serif;
     line-height: 150%;
 }
