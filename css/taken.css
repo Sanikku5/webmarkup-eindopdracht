@@ -2,6 +2,7 @@
 /* Mobile only header text */
 #taken-mobile-header {
     display: none;
+    padding: var(--body-side-padding);
 }
 
 #taken-hero {
@@ -32,7 +33,7 @@
     background-color: var(--secondary-color-light);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 2rem;
+    gap: 2rem;
 }
 
 .taken-taak {
@@ -51,15 +52,68 @@
     display: none;
 }
 
+.taken-taak > figure > img {
+    width: 100%;
+    border-radius: 16px;
+}
+
 #taken-desktop-images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 32px;
+    column-gap: 32px;
     padding: var(--body-side-padding);
 }
 
 #taken-desktop-images img {
     width: 100%;
+    /* Finally figured out how to make two images in a grid container match height without resorting to fixed units! */
+    height: 100%;
+    object-fit: cover;
     display: grid;
     border-radius: 16px;
+}
+
+@media only screen and (max-width: 1024px) {
+    #taken-mobile-header {
+        display: inline-block;
+    }
+
+    #taken-hero {
+        margin-top: 0;
+        height: 25rem;
+    }
+
+    #taken-hero > blockquote {
+        text-align: center;
+    }
+
+    .taken-desktop-header-text {
+        display: none;
+    }
+
+    #taken-main-section {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+    .taken-taak {
+        padding: 2rem var(--body-side-padding);
+        row-gap: 1rem;
+    }
+
+    .taken-taak > figure {
+        display: block;
+    }
+
+    #minister-van-algemene-zaken {
+        background-color: var(--background-color);
+    }
+
+    #taken-desktop-images {
+        display: none;
+    }
+
+    .button {
+        text-align: center;
+    }
 }
