@@ -1,0 +1,285 @@
+/* CSS FILE USED FOR de-man-zelf.html */
+.dick-zelf-section-text {
+    padding: 64px var(--body-side-padding);
+}
+
+.dick-zelf-section-text figure img {
+    border-radius: 16px;
+    height: 13rem;
+}
+
+figure > figcaption {
+    text-wrap: balance;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    'de-man-zelf de-man-zelf'
+    'jeugd       familie    '
+    'studeren    studeren   '
+    'sportfanaat sportfanaat'
+    'bijnamen    bijnamen   ';
+    background-color: var(--background-color);
+}
+
+#dick-zelf-de-man-zelf {
+    grid-area: de-man-zelf;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    /* Vertically align contents of a row to the center */
+    align-items: center;
+    padding-bottom: 0;
+    padding-right: 0;
+}
+
+#dick-zelf-de-man-zelf > aside {
+    /* Vertically align itself to the bottom */
+    align-self: end;
+}
+
+#dick-zelf-de-man-zelf > aside > img {
+    /* Again, this somehow fixes the alignment to the section under it? */
+    display: grid;
+    height: 25rem;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+#dick-zelf-jeugd {
+    grid-area: jeugd;
+    background-color: var(--secondary-color-light);
+}
+
+#dick-zelf-familie {
+    grid-area: familie;
+    background-color: var(--secondary-color-light);
+}
+
+#dick-zelf-studeren {
+    grid-area: studeren;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: 'figure body-text';
+    gap: 32px;
+}
+
+#dick-zelf-studeren > section {
+    grid-area: body-text;
+}
+
+#dick-zelf-studeren > figure {
+    grid-area: figure;
+}
+
+
+#dick-zelf-sportfanaat {
+    grid-area: sportfanaat;
+    background-color: var(--secondary-color-light);
+    display: grid;
+    gap: 32px;
+}
+
+#dick-zelf-wedstrijdroeier {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 32px;
+}
+
+#dick-zelf-marathonloper {
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-areas: 'body-text img-sifan img-washington';
+    gap: 32px;
+}
+
+#dick-zelf-marathonloper > section {
+    grid-area: body-text;
+}
+
+#img-sifan {
+    grid-area: img-sifan;
+}
+
+#img-washington {
+    grid-area: img-washington;
+}
+
+#dick-zelf-quotes {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas: 'video quotes';
+    /* Vertically align contents in the row */
+    align-items: center;
+    gap: 32px;
+}
+
+#dick-zelf-quotes > section {
+    grid-area: quotes;
+    display: grid;
+    /* Horizontally align contents in the column */
+    justify-items: center;
+    text-align: center;
+}
+
+#dick-zelf-quotes > figure {
+    grid-area: video;
+    width: fit-content;
+    display: grid;
+    /* Horizontally align items to the center */
+    justify-items: center;
+}
+
+/* Youtube embed video */
+iframe {
+    width: 32rem;
+    max-width: 100%;
+    height: 18rem;
+    border-radius: 16px;
+}
+
+#dick-zelf-bijnamen {
+    grid-area: bijnamen;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    'header      header      header                '
+    'dick-donder tricky-dick de-lachende-moordenaar';
+    row-gap: 16px;
+    column-gap: 5ch;
+}
+
+#dick-zelf-bijnamen > h2 {
+    grid-area: header;
+}
+
+#dick-zelf-dick-donder {
+    grid-area: dick-donder;
+}
+
+#dick-zelf-tricky-dick {
+    grid-area: tricky-dick;
+    display: grid;
+
+}
+
+#dick-zelf-tricky-dick > figure {
+    /* Horizontally center itself in the column */
+    justify-self: center;
+}
+
+#dick-zelf-tricky-dick > figure > img {
+    width: 100%;
+    height: auto;
+}
+
+#dick-zelf-de-lachende-moordenaar {
+    grid-area: de-lachende-moordenaar;
+}
+
+@media only screen and (max-width: 1200px) {
+    #dick-zelf-marathonloper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        'body-text body-text     '
+        'img-sifan img-washington';
+    }
+
+    #img-sifan > img, #img-washington > img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    #dick-zelf-quotes {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'quotes'
+        'video';
+    }
+
+    #dick-zelf-quotes > figure {
+        grid-area: video;
+        width: 100%;
+    }
+
+
+    #dick-zelf-bijnamen {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'header'
+        'dick-donder'
+        'tricky-dick'
+        'de-lachende-moordenaar';
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'de-man-zelf'
+        'jeugd'
+        'familie'
+        'studeren'
+        'sportfanaat'
+        'bijnamen';
+    }
+
+    #dick-zelf-de-man-zelf {
+        grid-template-columns: 1fr;
+        padding-top: var(--body-side-padding);
+        padding-right: var(--body-side-padding);
+    }
+
+    #dick-zelf-de-man-zelf > aside {
+        /* Horizontally align itself to the right */
+        justify-self: end;
+    }
+
+    #dick-zelf-studeren, #dick-zelf-wedstrijdroeier {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'body-text'
+        'figure';
+    }
+
+    .dick-zelf-section-text > figure > img, #dick-zelf-wedstrijdroeier > figure > img {
+        width: 100%;
+        height: auto;
+    }
+
+    #dick-zelf-marathonloper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        'body-text'
+        'img-sifan'
+        'img-washington';
+    }
+
+    #img-sifan > img, #img-washington > img {
+        height: auto;
+    }
+
+    #dick-zelf-familie {
+        background-color: var(--background-color);
+    }
+
+    #dick-zelf-studeren {
+        background-color: var(--secondary-color-light);
+    }
+
+    #dick-zelf-sportfanaat {
+        background-color: var(--background-color);
+    }
+
+    #dick-zelf-bijnamen {
+        background-color: var(--secondary-color-light);
+    }
+
+    .dick-zelf-section-text {
+        padding-top: 1.5rem;
+    }
+}
