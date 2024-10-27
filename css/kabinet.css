@@ -16,6 +16,7 @@ h1 {
 }
 
 #kabinet-cta {
+    padding: 0.5rem var(--body-side-padding);
     text-align: center;
 }
 
@@ -32,16 +33,137 @@ h1 {
     align-self: end;
 }
 
+table {
+    width: 100%;
+}
+
+th, td {
+    padding: 0.5rem 1ch;
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--text-color-dark);
+}
+
+th {
+    /* There's no bold Shanti, so it's looks like total doodoo with default bold styling */
+    font-weight: normal;
+    background-color: var(--primary-color);
+    color: var(--text-color-light);
+}
+
+/* Required by Web Markup Excellent criteria */
+tr:nth-child(even) {
+    background-color: #CFF;
+}
+
+tr:nth-child(odd) {
+    background-color: #FFF;
+}
+
 h2 {
     background-color: var(--secondary-color-light);
     padding: 0 var(--body-side-padding);
 }
 
+/* Columns containing all ministeries */
 #kabinet-columns {
     background-color: var(--secondary-color-light);
     padding: var(--body-side-padding);
+    /* Column count, column min-width */
+    columns: auto 500px;
+    column-gap: 2rem;
 }
 
+/* Individual ministery */
 .kabinet-card {
+    display: block;
+    /* Prevents making breaks within the blocks because of the columns property on #kabinet-columns */
+    break-inside: avoid-column;
     background-color: var(--background-color);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 16px;
+}
+
+/* Big heading text that says the name of the ministry */
+.kabinet-card > h3 {
+    padding-bottom: 0.5rem;
+}
+
+/* Avatar + Description of the minister */
+.kabinet-card__minister, .kabinet-card__staatssecretaris {
+    display: grid;
+    /* Vertically center */
+    align-items: center;
+    column-gap: 2ch;
+    padding-bottom: 0.5rem;
+}
+
+.kabinet-card__minister {
+    grid-template-columns: auto 1fr;
+}
+
+.kabinet-card__staatssecretaris {
+    display: grid;
+    /* The 100px isn't arbitrary, it's to match .kabinet-card__minister */
+    grid-template-columns: 100px 1fr;
+}
+
+/* Avatar of the minister */
+.kabinet-card__minister__avatar, .kabinet-card__staatssecretaris__avatar {
+    object-fit: cover;
+    border-radius: 100%;
+    /* Horizontally align to the center */
+    justify-self: center;
+}
+
+.kabinet-card__minister__avatar {
+    width: 100px;
+    height: 100px;
+}
+
+.kabinet-card__staatssecretaris__avatar {
+    width: 80px;
+    height: 80px;
+}
+
+.kabinet-card__description {
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width:1200px) {
+    #kabinet-info {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        padding-top: var(--body-side-padding);
+    }
+
+    .kabinet-card__staatssecretaris {
+        /* The 65px isn't arbitrary, it's to match .kabinet-card__minister */
+        grid-template-columns: 65px 1fr;
+    }
+    
+    .kabinet-card__minister__avatar {
+        width: 65px;
+        height: 65px;
+    }
+    
+    .kabinet-card__staatssecretaris__avatar {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media only screen and (max-width: 460px) {
+    .kabinet-hide-when-cramped {
+        display: none;
+    }
+
+    th, td {
+        padding: 0.5rem 0;
+    }
 }
