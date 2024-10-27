@@ -228,6 +228,11 @@ main > header > h1 {
     z-index: 5;
 }
 
+#mobile-timestamp-nu {
+    border-radius: 16px;
+    width: 50%;
+}
+
 /* Specific layout for the minister-president card */
 #card-minister-president section.timeline__card__body > section {
     grid-template-rows: 1fr auto auto auto;
@@ -342,6 +347,8 @@ main > header > h1 {
         'card-vwo'
         'card-verhuisd'
         'card-geboren';
+        /* Horizontally align to center */
+        justify-items: center;
     }
 
     #timeline-bar {
