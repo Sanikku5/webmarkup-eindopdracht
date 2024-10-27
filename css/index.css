@@ -4,6 +4,8 @@
     display: grid;
     /* First columns stretches and shrinks with the room given by the grid container, second column's width depends on it's contents */
     grid-template-columns: 1fr auto;
+    /* Horizontally align the contents of the grid children to the right */
+    justify-items: end;
     /* Vertically align the contents of the grid children to the bottom */
     align-items: end;
     padding-top: 5rem;
