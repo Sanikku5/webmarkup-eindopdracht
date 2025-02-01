@@ -181,7 +181,7 @@ table {
 
 /* Hide certain text in the nav pills if the screen gets to cramped */
 @media only screen and (max-width: 1140px) {
-    #nav-pill-hide-when-cramped {
+    .nav-pill-hide-when-cramped {
         display: none;
     }
     
