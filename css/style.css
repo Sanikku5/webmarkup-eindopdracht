@@ -110,14 +110,14 @@ table {
     text-decoration: none;
     /* box-shadow: color, x-offset, y-offset, blur radius */
     box-shadow: rgba(0, 0, 0, 20%) 0 2px 8px;
-    transform: scale(100%);
+    transform: scale(1);
     /* Transform has an ease-out with slight overshoot animation */
     transition: background-color 100ms, transform 100ms var(--transition-overshoot);
 }
 
 .button:hover {
     background-color: var(--accent-color);
-    transform: scale(105%);
+    transform: scale(1.05);
 }
 
 .button:active {
@@ -363,13 +363,13 @@ table {
     padding: 8px 16px;
     border-radius: 16px;
     text-wrap: nowrap;
-    transform: scale(100%);
+    transform: scale(1);
     transition: background-color 100ms, transform 100ms var(--transition-overshoot);
 }
 
 #main-footer > nav > ul > li > a:hover {
     background-color: rgba(0, 0 , 0, 0.2);
-    transform: scale(105%);
+    transform: scale(1.05);
 }
 
 /* MOBILE */
