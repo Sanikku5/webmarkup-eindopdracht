@@ -1,4 +1,16 @@
 /* CSS FILE USED FOR THE CONTACT PAGE (contact.html) */
+/* FAQ */
+#FAQ {
+    display: grid;
+    row-gap: 1rem;
+}
+
+details {
+    background-color: var(--accent-color-light);
+    padding: 1rem;
+    border-radius: 16px;
+}
+
 /* Form */
 fieldset {
     /* Remove default border */
