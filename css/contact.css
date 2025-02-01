@@ -1,0 +1,19 @@
+/* CSS FILE USED FOR THE CONTACT PAGE (contact.html) */
+#cookie-pop-up {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 9999;
+
+    display: block;
+    border-radius: 16px;
+    padding: 1rem;
+    background-color: var(--background-color);
+
+    transform: scale(1);
+    transition: transform 100ms var(--transition-overshoot);
+}
+
+#cookie-pop-up:hover {
+    transform: scale(1.05);
+}
