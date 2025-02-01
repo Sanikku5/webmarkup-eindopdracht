@@ -1,4 +1,12 @@
 /* CSS FILE USED FOR THE CONTACT PAGE (contact.html) */
+/* Form */
+fieldset {
+    /* Remove default border */
+    border: 0;
+    background-color: var(--secondary-color-light);
+}
+
+/* Cookie pop-up */
 #cookie-pop-up {
     position: fixed;
     bottom: 1rem;
@@ -9,6 +17,8 @@
     border-radius: 16px;
     padding: 1rem;
     background-color: var(--background-color);
+    /* box-shadow: color, x-offset, y-offset, blur radius */
+    box-shadow: rgba(0, 0, 0, 20%) 0 2px 8px;
 
     transform: scale(1);
     transition: transform 100ms var(--transition-overshoot);

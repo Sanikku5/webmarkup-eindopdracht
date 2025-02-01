@@ -74,7 +74,7 @@ h6, .h6 {
 }
 
 /* All text besides headings */
-p, span, a, blockquote, figcaption, th, td, li, label, input, select {
+p, span, a, blockquote, figcaption, th, td, li, label, input, select, legend {
     font-family: "Shanti", sans-serif;
     line-height: 150%;
 }
@@ -102,6 +102,7 @@ table {
     display: inline-block;
     box-sizing: border-box;
     padding: 0.5em 1em;
+    border: 0;
     border-radius: 8px;
     background-color: var(--accent-color-light);
     color: var(--text-color-dark);
