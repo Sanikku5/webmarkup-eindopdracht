@@ -28,7 +28,7 @@ h1 {
     gap: 2rem;
 }
 
-#kabinet-info > figure {
+#kabinet-info>figure {
     /* Vertically align to the bottom */
     align-self: end;
 }
@@ -37,7 +37,8 @@ table {
     width: 100%;
 }
 
-th, td {
+th,
+td {
     padding: 0.5rem 1ch;
     border-width: 5px;
     border-style: double;
@@ -86,12 +87,13 @@ h2 {
 }
 
 /* Big heading text that says the name of the ministry */
-.kabinet-card > h3 {
+.kabinet-card>h3 {
     padding-bottom: 0.5rem;
 }
 
 /* Avatar + Description of the minister */
-.kabinet-card__minister, .kabinet-card__staatssecretaris {
+.kabinet-card__minister,
+.kabinet-card__staatssecretaris {
     display: grid;
     /* Vertically center */
     align-items: center;
@@ -110,7 +112,8 @@ h2 {
 }
 
 /* Avatar of the minister */
-.kabinet-card__minister__avatar, .kabinet-card__staatssecretaris__avatar {
+.kabinet-card__minister__avatar,
+.kabinet-card__staatssecretaris__avatar {
     object-fit: cover;
     border-radius: 100%;
     /* Horizontally align to the center */
@@ -152,12 +155,12 @@ h2 {
         /* The 65px isn't arbitrary, it's to match .kabinet-card__minister */
         grid-template-columns: 65px 1fr;
     }
-    
+
     .kabinet-card__minister__avatar {
         width: 65px;
         height: 65px;
     }
-    
+
     .kabinet-card__staatssecretaris__avatar {
         width: 55px;
         height: 55px;
@@ -169,7 +172,8 @@ h2 {
         display: none;
     }
 
-    th, td {
+    th,
+    td {
         padding: 0.5rem 0;
     }
 }

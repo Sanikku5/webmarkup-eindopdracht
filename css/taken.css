@@ -11,7 +11,7 @@
     box-sizing: border-box;
     padding: 2rem var(--body-side-padding);
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 60%) 30%, rgba(0, 0, 0, 0%) 40%),
-                      url("./../img/schoof-en-rutte.png");
+        url("./../img/schoof-en-rutte.png");
     background-size: cover;
     background-position: center;
     color: var(--text-color-light);
@@ -48,11 +48,11 @@
 }
 
 /* Don't display the images in the columns for mobile */
-.taken-taak > figure {
+.taken-taak>figure {
     display: none;
 }
 
-.taken-taak > figure > img {
+.taken-taak>figure>img {
     width: 100%;
     border-radius: 16px;
 }
@@ -83,7 +83,7 @@
         height: 25rem;
     }
 
-    #taken-hero > blockquote {
+    #taken-hero>blockquote {
         text-align: center;
     }
 
@@ -101,7 +101,7 @@
         row-gap: 1rem;
     }
 
-    .taken-taak > figure {
+    .taken-taak>figure {
         display: block;
     }
 

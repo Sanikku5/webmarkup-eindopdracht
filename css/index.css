@@ -23,7 +23,7 @@ h1 {
     gap: 0.5rem;
 }
 
-#intro-section__text > blockquote {
+#intro-section__text>blockquote {
     padding-top: 3rem;
     text-align: center;
     /* Tries to balance wrapping text by making it so each line has around the same amount of characters */
@@ -46,7 +46,7 @@ h1 {
 }
 
 /* Picture of Dick Schoof to the right */
-#intro-section__img > img {
+#intro-section__img>img {
     /* Width of the image is 100% of the parent, whose width is defined by the grid container (#intro-section) */
     width: auto;
     max-height: 25rem;
@@ -76,7 +76,7 @@ h1 {
 }
 
 /* Little icons on the side of each card */
-.home-nav-cards__card > aside > img {
+.home-nav-cards__card>aside>img {
     width: 32px;
     height: auto;
     /* Codepen for finding the right filter combination to make a black png turn into a target color:
@@ -104,7 +104,7 @@ h1 {
     text-indent: 1rem;
 }
 
-.home-nav-cards__card__body > a.button {
+.home-nav-cards__card__body>a.button {
     /* Align itself to the bottom of the grid row */
     align-self: end;
     /* Align itself to the right in the grid row */
@@ -126,7 +126,7 @@ h1 {
         padding-right: var(--body-side-padding);
     }
 
-    #intro-section__img > img {
+    #intro-section__img>img {
         max-width: 90%;
     }
 

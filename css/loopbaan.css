@@ -1,12 +1,12 @@
 /* CSS FILE USED FOR loopbaan.html */
-main > header {
+main>header {
     padding-top: 11rem;
     padding-left: var(--body-side-padding);
     padding-right: var(--body-side-padding);
     padding-bottom: 4rem;
 }
 
-main > header > h1 {
+main>header>h1 {
     padding-bottom: 1rem;
 }
 
@@ -18,22 +18,22 @@ main > header > h1 {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas:
-    'card-minister-president                   timestamp-nu  '
-    'card-minister-president                   timestamp-2024'
-    'card-pvda                                 timestamp-2021'
-    'card-secretaris-generaal                  timestamp-2020'
-    'card-aivd                                 timestamp-2018'
-    'card-nctv                                 timestamp-2013'
-    'card-politie                              timestamp-2010'
-    'card-oov                                  timestamp-2003'
-    'card-ind                                  timestamp-1999'
-    'card-plaatsvervangend-secretaris-generaal timestamp-1996'
-    'card-ambtenaar                            timestamp-1988'
-    'card-beleidsmedewerker                    timestamp-1982'
-    'card-studie                               timestamp-1975'
-    'card-vwo                                  timestamp-1969'
-    'card-verhuisd                             timestamp-1965'
-    'card-geboren                              timestamp-1957';
+        'card-minister-president                   timestamp-nu  '
+        'card-minister-president                   timestamp-2024'
+        'card-pvda                                 timestamp-2021'
+        'card-secretaris-generaal                  timestamp-2020'
+        'card-aivd                                 timestamp-2018'
+        'card-nctv                                 timestamp-2013'
+        'card-politie                              timestamp-2010'
+        'card-oov                                  timestamp-2003'
+        'card-ind                                  timestamp-1999'
+        'card-plaatsvervangend-secretaris-generaal timestamp-1996'
+        'card-ambtenaar                            timestamp-1988'
+        'card-beleidsmedewerker                    timestamp-1982'
+        'card-studie                               timestamp-1975'
+        'card-vwo                                  timestamp-1969'
+        'card-verhuisd                             timestamp-1965'
+        'card-geboren                              timestamp-1957';
     /* Vertically align content to the bottom of the row */
     align-items: end;
     row-gap: 2rem;
@@ -190,7 +190,7 @@ main > header > h1 {
 }
 
 /* Text contents of a card */
-.timeline__card__body > section {
+.timeline__card__body>section {
     display: grid;
     /* Vertically align contents to the top */
     align-content: start;
@@ -205,7 +205,7 @@ main > header > h1 {
 }
 
 /* Image contents in the aside of a card */
-.timeline__card__body > aside {
+.timeline__card__body>aside {
     /* Vertically align contents to the bottom */
     align-self: end;
 }
@@ -234,7 +234,7 @@ main > header > h1 {
 }
 
 /* Specific layout for the minister-president card */
-#card-minister-president section.timeline__card__body > section {
+#card-minister-president section.timeline__card__body>section {
     grid-template-rows: 1fr auto auto auto;
 }
 
@@ -285,11 +285,12 @@ main > header > h1 {
     padding: var(--body-side-padding);
 }
 
-#timeline-bottom > a.button {
+#timeline-bottom>a.button {
     text-align: center;
 }
 
 @media only screen and (max-width: 1024px) {
+
     /* Put the aside images below the text, instead of to the right */
     .timeline__card__body:has(aside) {
         grid-template-columns: 1fr;
@@ -307,6 +308,7 @@ main > header > h1 {
 }
 
 @media only screen and (max-width: 768px) {
+
     /* Style mobile h2 like mobile h4 */
     h2 {
         font-size: 1.5rem;
@@ -319,7 +321,7 @@ main > header > h1 {
         line-height: 140%;
     }
 
-    main > header {
+    main>header {
         padding-top: var(--body-side-padding);
     }
 
@@ -331,22 +333,22 @@ main > header > h1 {
         display: grid;
         grid-template-columns: auto;
         grid-template-areas:
-        'nu'
-        'card-minister-president'
-        'card-pvda'
-        'card-secretaris-generaal'
-        'card-aivd'
-        'card-nctv'
-        'card-politie'
-        'card-oov'
-        'card-ind'
-        'card-plaatsvervangend-secretaris-generaal'
-        'card-ambtenaar'
-        'card-beleidsmedewerker'
-        'card-studie'
-        'card-vwo'
-        'card-verhuisd'
-        'card-geboren';
+            'nu'
+            'card-minister-president'
+            'card-pvda'
+            'card-secretaris-generaal'
+            'card-aivd'
+            'card-nctv'
+            'card-politie'
+            'card-oov'
+            'card-ind'
+            'card-plaatsvervangend-secretaris-generaal'
+            'card-ambtenaar'
+            'card-beleidsmedewerker'
+            'card-studie'
+            'card-vwo'
+            'card-verhuisd'
+            'card-geboren';
         /* Horizontally align to center */
         justify-items: center;
     }
@@ -369,12 +371,14 @@ main > header > h1 {
         padding: 0;
     }
 
-    .timeline__card > header {
+    .timeline__card>header {
         display: grid;
         padding-bottom: 16px;
     }
 
-    .timeline__card > header > h2, .timeline__card > header > h3, .timeline__card__body {
+    .timeline__card>header>h2,
+    .timeline__card>header>h3,
+    .timeline__card__body {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -383,12 +387,13 @@ main > header > h1 {
         padding-bottom: 16px;
     }
 
-    .timeline__card > header > h2 {
+    .timeline__card>header>h2 {
         padding-top: 16px;
     }
 }
 
 @media only screen and (max-width:550px) {
+
     /* Specific styling for the PvdA card */
     #card-pvda .timeline__card__body {
         grid-template-columns: auto;
