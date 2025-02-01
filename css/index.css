@@ -1,7 +1,7 @@
 /* CSS FILE USED FOR THE HOME PAGE (index.html) */
 /* REQUIRED CRITERIA FOR CSS BASIC WHAT AM I LOOKING AT */
 h1 {
-    word-spacing: 2rem;
+    word-spacing: 1rem;
     text-transform: uppercase;
 }
 
@@ -29,7 +29,7 @@ h1 {
     /* Tries to balance wrapping text by making it so each line has around the same amount of characters */
     text-wrap: balance;
     /* REQUIRED CRITERIA FOR CSS BASIC, PLEASE GET RID OF IT BEFORE MY EYES MELT */
-    letter-spacing: 2px;
+    letter-spacing: 1.4px;
 }
 
 #intro-section__text__quoted-person {
@@ -39,6 +39,8 @@ h1 {
 #intro-section__img {
     /* For some reason, this aligns the image perfectly to the bottom, compared to when this is not declared.. */
     display: grid;
+    /* REQUIRED FOR CSS ADVANCED */
+    float: right;
     /* Horizontally align to the right */
     justify-self: end;
 }
@@ -99,7 +101,7 @@ h1 {
 
 .home-nav-cards__card__body p {
     /* REQUIRED FOR CSS BASIC */
-    text-indent: 2rem;
+    text-indent: 1rem;
 }
 
 .home-nav-cards__card__body > a.button {
